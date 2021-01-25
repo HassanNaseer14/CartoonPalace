@@ -1,0 +1,229 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+    <title>{% block title%} {% endblock %}</title>
+</head>
+
+
+  <style>
+    header{
+    display: flex;
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    align-items: center;
+}
+
+.logo-container,
+.nav-links
+{
+	display: flex;
+}
+
+
+.logo-container{
+    flex: -1;
+}
+
+nav{
+    flex:2;
+}
+
+.nav-links{
+    justify-content:space-around ;
+    list-style-type: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+  
+    overflow: hidden;
+}
+
+.nav-link:hover{
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:632px){
+
+   
+    
+    
+
+
+.logo-container{
+  
+    
+padding-left: 15%;
+
+
+}
+
+.logo{
+   
+    font-size: 20px;
+}
+
+nav{
+    display: none;
+    
+}
+
+.nav-link{
+    font-size:13px;
+}
+.services{
+    justify-content: center;
+}
+
+.burger{
+   
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    left: 5%;
+
+}
+.nav-links {
+    position: fixed;
+    background: #2a303b;;
+    height: 50vh;
+    width: 40%;
+    left: 2%;
+    flex-direction: column;
+    top: 5%;
+    transition: all 1s ease;
+    padding: 0px;
+    color: white;
+    box-shadow: 2px 2px black;
+  }
+
+
+.line1{
+    width:20px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    margin: 2px;
+}
+.line2{
+    width:20px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    margin: 2px;
+    
+}
+.line3{
+    width:20px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    margin: 2px;
+}
+
+.change{
+   display: flex;
+    flex-direction: column;
+
+    
+
+    
+}
+
+.nav-links .change{
+    pointer-events: all;
+    transition: all 1s ease;
+    
+    
+}
+
+.nav-change{
+    animation: appear .3s ease-out;
+
+}
+
+
+
+@keyframes appear {
+    0%{
+        opacity: 0px;
+        transform: translateY(-10px) translateX(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) translateX(0px)
+    }
+}
+
+
+
+
+
+
+
+}
+
+  </style>
+
+<body>
+    
+  <header>
+    <div class="burger" id="burger"  onclick="onClickMenu()">
+       
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    
+    </div>
+    <nav id="nav">
+        <ul class="nav-links" id="nav-links">
+            <li><a class="nav-link" href="/">Home</a></li>
+            
+            <li><a class="nav-link" href="">Pricing</a></li>
+           
+            <li><a class="nav-link" href="">Syllabus</a></li>
+               
+ 
+            <li><a class="nav-link" href="">Register</a></li>
+
+
+
+        </ul>
+
+    </nav>
+
+    <div class="logo-container">
+        <h1 class="logo">Online Qari</h1>
+    </div>
+</header>
+    {% block content%}
+    {% endblock %}
+
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

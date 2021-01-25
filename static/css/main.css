@@ -1,0 +1,313 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #14161a;
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #e6e1d3;
+}
+
+hr{
+    border: 1px solid  #4d5870;
+}
+
+
+
+
+main{
+    width: 80%;
+    margin: auto;
+    
+
+
+}
+
+
+
+
+
+
+
+
+.cartoon-description{
+    
+    margin-top: 4%;
+    height: 70%;  
+    overflow: hidden;
+    margin-bottom: 2%;
+
+}
+
+
+.season-head{
+    display: flex;
+    background-color: #1f2329;
+    
+    
+}
+
+.cartoon-name{
+    
+    flex: 1;
+ 
+    overflow-y: hidden;
+    padding: 3%; 
+    margin: 0;
+    
+}
+
+
+
+.season{
+    padding-top: 6%;
+}
+.season-list{
+    display: flex;
+    margin-bottom: 5%;
+
+}
+
+.season-details{
+    flex: 1;
+    
+}
+
+a{
+    text-decoration: none; 
+    color: #e6e1d3;;
+}
+
+.season-details h1{
+    margin: 1%;
+}
+
+.season-description{
+
+    margin: 1%;
+}
+
+
+.season-list:hover{
+    border:  1px solid #63758f;
+    animation-delay:.5s;
+
+  
+}
+
+.seasons-description{
+    width: 99%;
+    overflow-y: hidden;
+    margin: auto
+}
+
+
+.episode-item{
+    display: flex; 
+    margin-bottom: 2%;
+    border: 1px solid #2e353f;
+}
+
+.episode-item:hover{
+    border: 1px solid #63758f;
+}
+.episode-details{
+    flex: 1; 
+    margin: 1%;
+}
+
+@media screen and (max-width:800px){
+ 
+    main{
+        width:95%; 
+        
+    }
+
+    .cover{
+        width:200px; 
+    }
+
+    .cartoon-name h1{
+    
+        font-size: 20px; 
+    }
+
+    .cartoon-name p{
+        font-size: 14px; 
+    }
+
+
+    .cartoon-description{
+        height: 65%;
+    }
+
+    .season-cover{
+        width: 130px; 
+
+    }
+
+    .season-details h1{
+        font-size: 18px;
+
+    }
+
+    .season-description p{
+        font-size:13px; 
+    }
+
+
+
+}
+
+@media screen and (max-width: 600px){
+    .cover{
+        height: 320px;
+    }
+
+    .cartoon-name h1{
+    
+        font-size: 16px; 
+    }
+
+    .cartoon-name p{
+        font-size: 12px; 
+    }
+
+    .cartoon-description{
+        height: 60%;
+    }
+
+    .season-details h1{
+        font-size: 15px;
+
+    }
+
+    .season-description p{
+        font-size:11px; 
+    }
+
+    .episode-thumbnail{
+        width: 150px; 
+        height: 59px; 
+    }
+
+    .episode-details a h3{
+        font-size:13px; 
+    }
+
+
+}
+
+
+@media screen and (max-width: 420px){
+    .cover{
+        width: 150px;
+        height: 280px;
+    }
+
+    .cartoon-name h1, strong{
+    
+        font-size: 14px; 
+    }
+
+    .cartoon-name p{
+        font-size: 10px; 
+    }
+
+    main{
+        width: 98%;
+    }
+
+    .season-details h1, strong{
+        font-size: 12px;
+
+    }
+
+    .season-description p{
+        font-size:9px; 
+    }
+
+    
+    .season-cover{
+        width: 110px;
+    }
+    .season-details{
+        padding: 8px;
+    }
+}
+
+.video-section{
+    margin: 5%;
+}
+
+
+.episode-name{ 
+    margin-top: 1%;
+}
+
+
+/* This section handles the Media Queries and other CSS for the Cartoon List */ 
+
+.cartoon-list{
+    width: 80%;
+    margin: auto;
+}
+
+
+.cartoon-item{
+
+
+    width: 200px;
+    margin: 3%;
+    float: left;
+    border-radius: 5%;
+
+}
+
+.cartoon-item:hover{
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 1px 2px rgb(109, 104, 104);
+}
+
+.cartoon-name{
+    margin: 1%;
+}
+
+.cartoon-image{
+
+    border-top-right-radius: 5%;
+    border-top-left-radius:  5%;
+    
+    width: 100%;
+
+
+}
+
+
+@media screen and (max-width:1320px){
+    .cartoon-item{
+        width: 250px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width:965px){
+    .cartoon-item{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .cartoon-item{
+        width: 90%;
+    }
+}
+
+
+

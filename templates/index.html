@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Home - CartoonsPalace
+{% endblock %}
+{% block content %}
+
+<section class="cartoon-list">
+
+    <style>
+        .text-link:hover{
+            color: rgb(75, 75, 197);
+        }
+    </style>
+    <div class="cartoon-container">
+            {% for cartoon in object_list %}
+
+                        <div class="cartoon-item">
+
+                            <a href="{% url 'cartoon' cartoon.pk%}"><img class="cartoon-image" src="{{cartoon.cover}}" alt="{{cartoon.name}}"></a>
+
+
+                            <div class="cartoon-name">
+                                <a class="text-link" href="{% url 'cartoon' cartoon.pk%}"><h1>{{cartoon.name}}</h1></a>
+                                <small><i>{{cartoon.start_date}} - {{cartoon.end_date}} </i></small>
+                            </div>
+                        </div>
+
+            {% endfor %}
+                        
+    </div>
+</section>
+{% endblock %}
+
+

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{object.name}} | {{object.season.season_name}} | {{object.season.cartoon.name}}
+{% endblock %}
+
+{% block content %}
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+
+    <section class="video-section">
+        <div class="video-player">
+            <div class='embed-container'><iframe src='{{object.link}}'></iframe></div>
+            <div class="episode-name">
+                <h1>Episode {{object.number}}: {{object.name}}</h1>
+                <small>{{object.season.cartoon.name}} -  {{object.season.season_name}}</small><br>
+                <small>Date Published:{{object.published}}</small>
+            </div>
+
+            <br>
+            <br>
+            
+
+            <hr>
+            <br>
+            <div class="episode-description">
+                <p>{{object.description}}</p>
+            </div>
+            <br>	
+            <hr>
+        </div>
+
+      
+    </section>
+{% endblock %}

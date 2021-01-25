@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{object.name}} - Season List
+{% endblock %}
+{% block content %}
+
+        <main>
+            <section class="cartoon-description">
+                <div class="season-head">
+                    <img src="{{object.cover}}"  class="cover"alt="">
+                    <div class="cartoon-name">
+                        <h1>{{object.name}}</h1>
+                        <small>{{object.start_date}} - {{object.end_date}}</small><br>
+                        <strong>Description:</strong>
+                        <p>{{object.description}}</p>
+                    </div>
+                </div>
+            </section>
+         
+    
+            <hr>
+    
+            <section class="season">
+                {% for season in seasons %}
+                <div class="season-list">
+                    <a href="{% url 'episode_list' season.pk %}"><img class="season-cover" src="{{season.season_cover}}" alt="{{season.season_name}}"></a>
+
+                    <div class="season-details">
+                        <h1>Season {{season.season_number}}: {{season.season_name}}</h1>
+                        <div class="season-description">
+                            <strong>Description:</strong>
+                              <p>{{season.season_description}}</p>  
+
+
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}
+            </section>
+    
+        </main>
+
+{% endblock %}
