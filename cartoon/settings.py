@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'cartoon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':  'cartoons',
-        'USER' : 'postgres', 
-        'PASSWORD': '1234',
-        'HOST' : 'localhost'
+        'NAME':  'd1d71brrbfum38',
+        'USER' : 'lectylpxdmygqg', 
+        'PASSWORD': '83edb7f112d7266df97fd30dd8152a7623e73da8849cadfa1ea9289024dcf08f',
+        'HOST' : 'ec2-3-208-168-0.compute-1.amazonaws.com'
     }
 }
 
