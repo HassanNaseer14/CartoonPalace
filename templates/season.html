@@ -23,7 +23,7 @@
             <section class="season">
                 {% for season in seasons %}
                 <div class="season-list">
-                    <a href="{% url 'episode_list' season.pk %}"><img class="season-cover" src="{{season.season_cover}}" alt="{{season.season_name}}"></a>
+                    <a href="{% url 'episode_list' season.pk %}"><img class="season-cover" src="{{season.season_cover}}" alt="{{season.season_name}}" width="184px"></a>
 
                     <div class="season-details">
                         <h1>Season {{season.season_number}}: {{season.season_name}}</h1>
