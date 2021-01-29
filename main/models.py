@@ -33,9 +33,9 @@ class CartoonSeason(models.Model):
 class Episode(models.Model):
     season = models.ForeignKey(CartoonSeason, on_delete=models.CASCADE)
     number = models.IntegerField()
-
+    cover  = models.URLField(max_length=300, blank=True, null=True)
     name = models.CharField(max_length=200, blank=True, null=True)
-
+    description = models.TextField(blank=True, null=False)
     link = models.URLField(max_length=300, blank=True, null=True)
     published = models.DateField(auto_now_add=True, blank=True, null=True)
 
