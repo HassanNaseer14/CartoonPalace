@@ -40,6 +40,8 @@ class Episode(models.Model):
     published = models.DateField(auto_now_add=True, blank=True, null=True)
 
 
+    class Meta:
+        ordering = ["number"]
     def __str__(self):
         return str(self.number) + ": " +  self.name + " | " +  self.season.season_name +  " | " + self.season.cartoon.name
 
